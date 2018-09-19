@@ -103,7 +103,7 @@
 <meta property="og:description" content="NPM Version Management Specification 来源常规的开发，常规的代码，不动如山的CI，突然发生了错误，导致失败，出现以下错误：1Build failed: [BABEL] /xxx/xxx/yyy/.xxx.js: You gave us a visitor for the node type OptionalCallExpression but it&apos;s not">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://blog.fangyongle.com/images/pack.jpeg">
-<meta property="og:updated_time" content="2018-09-19T08:57:11.798Z">
+<meta property="og:updated_time" content="2018-09-19T08:59:37.464Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="你真的知道NPM版本管理规范吗">
 <meta name="twitter:description" content="NPM Version Management Specification 来源常规的开发，常规的代码，不动如山的CI，突然发生了错误，导致失败，出现以下错误：1Build failed: [BABEL] /xxx/xxx/yyy/.xxx.js: You gave us a visitor for the node type OptionalCallExpression but it&apos;s not">
@@ -400,7 +400,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  2,298
+                  2,297
                 </span>
               
 
@@ -520,7 +520,7 @@
 </ul>
 <h3 id="锁定（控制）版本"><a href="#锁定（控制）版本" class="headerlink" title="锁定（控制）版本"></a>锁定（控制）版本</h3><p>看到这，聪明的你一定想到了<code>package-lock.json</code>或是<code>yarn.lock</code>。</p>
 <p>在<code>npm</code>的版本<code>&gt;=5.1</code>的时候，<code>package-lock.json</code>文件是自动打开的，意味着会自动生成，<br><code>package-lock.json</code>（<a href="https://docs.npmjs.com/files/package-lock.json" target="_blank" rel="noopener">官方文档</a>）可以理解为<code>/node_modules</code>文件夹内容的<code>json</code>映射，并能够感知<code>npm</code>的安装/升级/卸载的操作。可以保证在不同的环境下安装的包版本保持一致。听上去很不错哈，实际使用中，大部分它的表现确实不错，可是如上述问题：我手动修改了<code>package.json</code>文件内依赖的版本，<code>package-lock.json</code>就没那么聪明（至少目前是，未来会不会变聪明就不可知了），且不会变化。于是BOOOOOOM～～～～</p>
-<p><strong>S O </strong></p>
+<p><strong>SO</strong></p>
 <p>如果你真的想保证你的包版本在各个环境都是一样的话，请修改下<code>package.json</code>中的依赖，去掉默认前面的<code>^</code>，当然这样的话，你就没法自动享受依赖包小版本的修复了，问题来了，在什么情况下选择哪一种呢？</p>
 <ul>
 <li>在依赖包严格按照版本规范来开发的，你可以使用<code>^</code>来享受包的最新功能和修复。这也是推荐的。</li>
