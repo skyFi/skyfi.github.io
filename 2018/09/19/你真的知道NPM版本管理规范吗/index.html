@@ -102,12 +102,12 @@
 <meta property="og:site_name" content="方永乐 Skylor.min">
 <meta property="og:description" content="NPM Version Management Specification 来源常规的开发，常规的代码，不动如山的CI，突然发生了错误，导致失败，出现以下错误：1Build failed: [BABEL] /xxx/xxx/yyy/.xxx.js: You gave us a visitor for the node type OptionalCallExpression but it&apos;s not">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://blog.fangyongle.com/images/npm-pack.png">
-<meta property="og:updated_time" content="2018-09-19T08:50:49.622Z">
+<meta property="og:image" content="https://blog.fangyongle.com/images/pack.jpeg">
+<meta property="og:updated_time" content="2018-09-19T08:52:51.014Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="你真的知道NPM版本管理规范吗">
 <meta name="twitter:description" content="NPM Version Management Specification 来源常规的开发，常规的代码，不动如山的CI，突然发生了错误，导致失败，出现以下错误：1Build failed: [BABEL] /xxx/xxx/yyy/.xxx.js: You gave us a visitor for the node type OptionalCallExpression but it&apos;s not">
-<meta name="twitter:image" content="https://blog.fangyongle.com/images/npm-pack.png">
+<meta name="twitter:image" content="https://blog.fangyongle.com/images/pack.jpeg">
 
 
 
@@ -437,7 +437,7 @@
       
 
       
-        <h1 id="NPM-Version-Management-Specification"><a href="#NPM-Version-Management-Specification" class="headerlink" title="NPM Version Management Specification"></a>NPM Version Management Specification</h1><p><img src="/images/npm-pack.png" alt=""></p>
+        <h1 id="NPM-Version-Management-Specification"><a href="#NPM-Version-Management-Specification" class="headerlink" title="NPM Version Management Specification"></a>NPM Version Management Specification</h1><p><img src="/images/pack.jpeg" alt=""></p>
 <h2 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h2><p>常规的开发，常规的代码，不动如山的CI，突然发生了错误，导致失败，出现以下错误：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Build failed: [BABEL] /xxx/xxx/yyy/.xxx.js: You gave us a visitor for the node type OptionalCallExpression but it's not a valid type</span><br></pre></td></tr></table></figure></p>
 <p>本地调试之，赫然出现了不一样的错误：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Build failed: Cannot find module '@babel/runtime/core-js/object/keys'</span><br></pre></td></tr></table></figure></p>
 <p>观察了一下<code>package.json</code>，含有<code>&quot;babel-runtime&quot;: &quot;^6.9.2&quot;</code>，于是乎开开心心的安装了下<code>@babel/runtime</code> =&gt; <code>npm install @babel/runtime</code>。<br>BOOOOOM！继续报错，寻遍 issue 未发现错误原因以及真正的解决办法，TnT</p>
